@@ -37,7 +37,36 @@ public class Mavenproject1 {
          System.out.printf("Среднее арифметическое чисел = %s%n", num);
          int num2 = num/2;
          if (num2 > 3) System.out.println("Программа выполнена корректно");
-             
+         
+         /*задание 5*/
+         char symbol;
+         double number1, number2, result;
+         System.out.println("Введите число 1: ");
+         number1 = in.nextDouble();
+         System.out.println("Введите число 2: ");
+         number2 = in.nextDouble();
+         System.out.println("Введите символ  ‘+’, ‘-’, ‘*’ или ‘/’ ");
+         symbol = in.next().charAt(0);
+         switch (symbol) {
+             case '+' -> { 
+                 result = number1 + number2;
+                 System.out.print(result);
+            }
+             case '-' -> { 
+                 result = number1 - number2;
+                 System.out.print(result);
+            }
+             case '*' -> { 
+                 result = number1 * number2;
+                 System.out.print(result);
+            }
+             case '/' -> { 
+                 result = number1 / number2;
+                 System.out.print(result);
+            }
+             default -> System.out.print("Введен некорретный символ");
+                 
+            }
          
     }
 }

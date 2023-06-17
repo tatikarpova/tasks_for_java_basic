@@ -212,20 +212,19 @@ public class Mavenproject1 {
              nums2[i]=in.nextInt();
          }
          for(int i=0; i<i1; i++){
-             if(nums2[i]==x1){
+             if (nums2[i]==x1 || nums2[i]==y1 || nums2[i]==z1){
                 System.out.printf("%nДанное значение имеется в константах ");  
-             }
-             else{
-                 if(nums2[i]==y1){
-                     System.out.printf("%nДанное значение имеется в константах ");     
-                 }
-                 else{
-                     if(nums2[i]==z1){
-                         System.out.printf("%nДанное значение имеется в константах ");   
-                     }
-                 }
-             }
-             
-         }                         
+             }  
+         }  
+         /*задание 8*/  
+         int i2, sum2 = 0;
+         System.out.printf("%nВведите любое целое положительное число ");
+         i2 = in.nextInt();
+         for(int i = 1; i<= i2; i++){
+           if (i % 2 != 0 ) 
+               sum2 = sum2 + i;
+         }
+         System.out.printf("%nРезультат:  " + sum2);         
+         
     }
 }

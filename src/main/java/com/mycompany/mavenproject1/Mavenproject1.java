@@ -224,7 +224,27 @@ public class Mavenproject1 {
            if (i % 2 != 0 ) 
                sum2 = sum2 + i;
          }
-         System.out.printf("%nРезультат:  " + sum2);         
+         System.out.printf("%nРезультат:  " + sum2);  
+         
+         /*задание 9*/  
+         double[] nums3;
+         double sred = 0.0;
+         System.out.printf("%nВведите длину массива ");
+         int i3 = in.nextInt();
+         nums3 = new double[i3];
+         for(int i=0; i<i3; i++){
+             System.out.print("Введите число: ");
+             nums3[i]=in.nextDouble();
+         }
+         for(int i=0; i<i3; i++){
+              sred += nums3[i];
+         }
+         sred /= i3;
+         for(int i=0; i<i3; i++){
+             nums3[i]*=sred;
+              System.out.println(nums3[i]);
+         }
+         
          
     }
 }

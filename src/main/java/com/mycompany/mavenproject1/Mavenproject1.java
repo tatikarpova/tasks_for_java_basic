@@ -68,5 +68,134 @@ public class Mavenproject1 {
                  
             }
          
+         /*задание 6*/
+         int var2, M, R;
+         double numberR, metr, mili, yard, foot, numberM, kg, g, foont, karat;
+         System.out.printf("%nВыберите что переводить: 1 - масса, 2 - расстояние ");
+         var2 = in.nextInt();
+         switch(var2){
+             case 1 -> {   
+                 System.out.println("Выберите единицу измерения: 1 - килограмм, 2 - грамм, 3 - фунт, 4 - карат ");
+                 M = in.nextInt();
+                 switch(M){
+                     case 1 ->{
+                        System.out.println("Введите число: ");
+                        numberM = in.nextDouble(); 
+                        kg = numberM;
+                        g = numberM * 1000;
+                        foont = numberM * 2.2046226;
+                        karat = numberM * 5000;
+                        System.out.println("Результат: ");  
+                        System.out.printf("Килограммы: %s%n", kg);
+                        System.out.printf("Граммы: %s%n", g);
+                        System.out.printf("Фунты: %s%n", foont);
+                        System.out.printf("Караты: %s%n", karat);                        
+                     }
+                     case 2 -> {
+                        System.out.println("Введите число: ");
+                        numberM = in.nextDouble(); 
+                        kg = numberM * 0.001;
+                        g = numberM;
+                        foont = numberM * 0.0022046226;
+                        karat = numberM * 5;
+                        System.out.println("Результат: ");  
+                        System.out.printf("Килограммы: %s%n", kg);
+                        System.out.printf("Граммы: %s%n", g);
+                        System.out.printf("Фунты: %s%n", foont);
+                        System.out.printf("Караты: %s%n", karat);                         
+                     }
+                     case 3 -> {
+                        System.out.println("Введите число: ");
+                        numberM = in.nextDouble(); 
+                        kg = numberM * 0.4535923744953;
+                        g = numberM * 453.5923744953;
+                        foont = numberM;
+                        karat = numberM * 2267.9618724765;
+                        System.out.println("Результат: ");  
+                        System.out.printf("Килограммы: %s%n", kg);
+                        System.out.printf("Граммы: %s%n", g);
+                        System.out.printf("Фунты: %s%n", foont);
+                        System.out.printf("Караты: %s%n", karat);                         
+                     }
+                     case 4 -> {
+                        System.out.println("Введите число: ");
+                        numberM = in.nextDouble(); 
+                        kg = numberM * 0.00021;
+                        g = numberM * 0.2;
+                        foont = numberM * 0.000441;
+                        karat = numberM;
+                        System.out.println("Результат: ");  
+                        System.out.printf("Килограммы: %s%n", kg);
+                        System.out.printf("Граммы: %s%n", g);
+                        System.out.printf("Фунты: %s%n", foont);
+                        System.out.printf("Караты: %s%n", karat);                          
+                     }
+                     default -> System.out.print("Введено некорректное значение ");
+                 }
+                 
+             }
+             case 2 -> {
+                 System.out.println("Выберите единицу измерения: 1 - метр, 2 - миля, 3 - ярд, 4 - фут ");
+                 R = in.nextInt();
+                 switch(R){
+                     case 1 -> {
+                        System.out.println("Введите число: ");
+                        numberR = in.nextDouble(); 
+                        metr = numberR;
+                        mili = numberR * 0.00062137;
+                        yard = numberR * 1.093613;
+                        foot = numberR * 3.28084;
+                        System.out.println("Результат: ");  
+                        System.out.printf("Метры: %s%n", metr);
+                        System.out.printf("Мили: %s%n", mili);
+                        System.out.printf("Ярды: %s%n", yard);
+                        System.out.printf("Футы: %s%n", foot);
+                     }
+                     case 2 -> {
+                        System.out.println("Введите число: ");
+                        numberR = in.nextDouble(); 
+                        metr = numberR * 1609.34;
+                        mili = numberR;
+                        yard = numberR * 1760;
+                        foot = numberR * 5280;
+                        System.out.println("Результат: ");  
+                        System.out.printf("Метры: %s%n", metr);
+                        System.out.printf("Мили: %s%n", mili);
+                        System.out.printf("Ярды: %s%n", yard);
+                        System.out.printf("Футы: %s%n", foot);                        
+                     }
+                     case 3 -> {
+                        System.out.println("Введите число: ");
+                        numberR = in.nextDouble(); 
+                        metr = numberR * 0.9144;
+                        mili = numberR * 0.00056;
+                        yard = numberR;
+                        foot = numberR * 3;
+                        System.out.println("Результат: ");  
+                        System.out.printf("Метры: %s%n", metr);
+                        System.out.printf("Мили: %s%n", mili);
+                        System.out.printf("Ярды: %s%n", yard);
+                        System.out.printf("Футы: %s%n", foot);                         
+                     }
+                     case 4 -> {
+                        System.out.println("Введите число: ");
+                        numberR = in.nextDouble(); 
+                        metr = numberR * 0.3048;
+                        mili = numberR * 0.00018;
+                        yard = numberR * 0.333;
+                        foot = numberR;
+                        System.out.println("Результат: ");  
+                        System.out.printf("Метры: %s%n", metr);
+                        System.out.printf("Мили: %s%n", mili);
+                        System.out.printf("Ярды: %s%n", yard);
+                        System.out.printf("Футы: %s%n", foot);                         
+                     }
+                     default -> System.out.print("Введено некорректное значение ");
+                 }
+                             
+             }
+             default -> System.out.print("Введено некорректное значение");
+         }
+         
     }
 }

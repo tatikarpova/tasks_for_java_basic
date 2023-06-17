@@ -3,6 +3,7 @@
  */
 
 package com.mycompany.mavenproject1;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -197,5 +198,34 @@ public class Mavenproject1 {
              default -> System.out.print("Введено некорректное значение");
          }
          
+         /*задание 7*/
+         final int x1 = 10;
+         final int y1 = 15;
+         final int z1 = 20;
+         int i1;
+         System.out.printf("%nВведите длину массива ");
+         i1 = in.nextInt();
+         int[] nums2;
+         nums2 = new int[i1];
+         for(int i=0; i<i1; i++){
+             System.out.print("Введите число: ");
+             nums2[i]=in.nextInt();
+         }
+         for(int i=0; i<i1; i++){
+             if(nums2[i]==x1){
+                System.out.printf("%nДанное значение имеется в константах ");  
+             }
+             else{
+                 if(nums2[i]==y1){
+                     System.out.printf("%nДанное значение имеется в константах ");     
+                 }
+                 else{
+                     if(nums2[i]==z1){
+                         System.out.printf("%nДанное значение имеется в константах ");   
+                     }
+                 }
+             }
+             
+         }                         
     }
 }

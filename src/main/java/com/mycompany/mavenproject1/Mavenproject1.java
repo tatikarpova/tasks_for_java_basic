@@ -244,7 +244,31 @@ public class Mavenproject1 {
              nums3[i]*=sred;
               System.out.println(nums3[i]);
          }
-         
-         
+ 
+        /*задание 10*/ 
+        System.out.printf("%nВведите размерность матрицы: число строк ");
+        int i4, i5;
+        i4 = in.nextInt();
+        System.out.printf("%nВведите размерность матрицы: число столбцов ");       
+        i5 = in.nextInt();
+        double nums4[][] = new double[i4][i5];
+        for(int i = 0; i <nums4.length; i++)
+        {
+            for ( int j = 0; j<nums4[i].length; j++)
+            {
+                System.out.printf("%nВведите значение элемента массива:  ");
+                nums4[i][j] = in.nextDouble();
+            }
+            
+        }
+        for(int i = 0; i <=0; i++)
+        {
+            for ( int j = 0; j<nums4[i].length; j++)
+            {
+                nums4[i][j]= nums4[i][j]*3.0;
+                System.out.print(nums4[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }

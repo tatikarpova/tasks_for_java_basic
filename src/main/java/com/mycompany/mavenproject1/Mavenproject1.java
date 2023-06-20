@@ -295,6 +295,19 @@ public class Mavenproject1 {
         System.out.println(str3.substring(7,11));     
        
 
-        
+        /*задание 13*/
+        System.out.printf("%nВведите строку:  ");       
+        String str4 = str.nextLine(); 
+        String[] str5 = str4.split(" ");
+        int count = 0;
+        for (int i = 0; i < str5.length; i++)
+        {
+            if (str5[i].matches("[a-zA-Z]+"))
+            {
+                count++;            
+            }
+                    
+        }
+        System.out.printf("%nКоличество слов из латинских символов: " + count); 
     }
 }

@@ -284,8 +284,17 @@ public class Mavenproject1 {
         double min = Double.valueOf(min0);
         System.out.printf("%nМеньшее из введенных чисел: " + min);
         
-        
-        
+        /*задание 12*/
+        System.out.printf("%nВведите строку:  ");       
+        String str2 = str.nextLine();
+        if (str2.contains("Java") && str2.startsWith("I like") && str2.endsWith("!!!"))
+        {
+         System.out.println(str2.toUpperCase()); 
+        }
+        String str3 = str2.replace("a", "o");
+        System.out.println(str3.substring(7,11));     
+       
+
         
     }
 }

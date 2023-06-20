@@ -270,5 +270,22 @@ public class Mavenproject1 {
             }
             System.out.println();
         }
+
+        /*задание 11*/ 
+        Scanner str = new Scanner(System.in);
+        System.out.print("Введите первое число:  ");
+        String v1 = str.nextLine();
+        System.out.printf("%nВведите второе число:  ");
+        int v2 = in.nextInt();
+        Integer v3 = Integer.valueOf(v1);
+        int max = Math.max(v2, v3);
+        System.out.printf("%nБольшеее из введенных чисел: " + max);
+        int min0 = Math.min(v2, v3);
+        double min = Double.valueOf(min0);
+        System.out.printf("%nМеньшее из введенных чисел: " + min);
+        
+        
+        
+        
     }
 }

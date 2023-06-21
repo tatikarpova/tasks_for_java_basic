@@ -5,6 +5,7 @@
 package com.mycompany.mavenproject1;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Random;
 
 /**
  *
@@ -309,5 +310,30 @@ public class Mavenproject1 {
                     
         }
         System.out.printf("%nКоличество слов из латинских символов: " + count); 
+        
+        /*задание 14*/
+        int[] nums5 = new int[15];
+        int max_mod = 0;
+        for (int i = 0; i < 15; i++)
+        {
+            nums5[i] = (int)(Math.random()*41) - 20;
+        }
+        int max5 = nums5[0];
+        for (int i = 0; i < 15; i++)
+        {
+            if(nums5[i] > max5)
+                max5 = nums5[i];
+        }
+        int min5 = nums5[0];
+        for (int i = 0; i < 15; i++)
+        {
+            if(nums5[i] < min5)
+                min5 = nums5[i];
+        }
+        System.out.printf("%nМаксимальный элемент массива: " + max5); 
+        System.out.printf("%nМинимальный элемент массива " + min5); 
+        max_mod  = Math.max(Math.abs(max5), Math.abs(min5));
+        System.out.printf("%nМаксимальный элемент массива по модулю: " + max_mod );
+        
     }
 }

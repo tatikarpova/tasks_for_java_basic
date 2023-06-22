@@ -335,5 +335,18 @@ public class Mavenproject1 {
         max_mod  = Math.max(Math.abs(max5), Math.abs(min5));
         System.out.printf("%nМаксимальный элемент массива по модулю: " + max_mod );
         
+        /* итоговая задача №1*/
+        System.out.printf("%nВведите текущий курс: ");
+        double rate = in.nextDouble();
+        System.out.printf("%nВведите количество рублей: ");
+        double rubles = in.nextDouble();
+        double transfer = rate * rubles;
+        System.out.printf("%nКурс доллара: " + rate );
+        System.out.printf("%nКоличество рублей: " + rubles );
+        System.out.printf("%nИтого: %.2f",transfer);
+        
+        
+        
+        
     }
 }

@@ -346,7 +346,50 @@ public class Mavenproject1 {
         System.out.printf("%nИтого: %.2f",transfer);
         
         
-        
-        
+        /* итоговая задача №2*/
+        System.out.printf("%nВведите уравнение: " ); 
+        String formula0 = str.nextLine(); 
+        int X, A, B;
+       // String[] str5 = str4.split(" ");
+        char[] formula = formula0.toCharArray();
+        //случаи , если x стоит после знака равенства
+        if (formula[4]=='x' && formula[1]=='-') {
+            A = Integer.parseInt(String.valueOf(formula[0]));
+            B = Integer.parseInt(String.valueOf(formula[2]));
+            X = A - B;
+            System.out.printf("%nОтвет " + X );            
+        }
+        if (formula[4]=='x' && formula[1]=='+') {
+            A = Integer.parseInt(String.valueOf(formula[0]));
+            B = Integer.parseInt(String.valueOf(formula[2]));
+            X = A + B;
+            System.out.printf("%nОтвет: "+ X );            
+        }
+         //случаи , если x - первое введенное число
+        if (formula[0]=='x' && formula[1]=='-') {
+            A = Integer.parseInt(String.valueOf(formula[4]));
+            B = Integer.parseInt(String.valueOf(formula[2]));
+            X = A + B;
+            System.out.printf("%nОтвет: "+ X );            
+        }
+        if (formula[0]=='x' && formula[1]=='+') {
+            A = Integer.parseInt(String.valueOf(formula[4]));
+            B = Integer.parseInt(String.valueOf(formula[2]));
+            X = A - B;
+            System.out.printf("%nОтвет: "+ X );            
+        }
+         //случаи , если x - второе введенное число
+        if (formula[2]=='x' && formula[1]=='-') {
+            A = Integer.parseInt(String.valueOf(formula[0]));
+            B = Integer.parseInt(String.valueOf(formula[4]));
+            X = A - B;
+            System.out.printf("%nОтвет: "+ X );            
+        }
+        if (formula[2]=='x' && formula[1]=='+') {
+            A = Integer.parseInt(String.valueOf(formula[4]));
+            B = Integer.parseInt(String.valueOf(formula[0]));
+            X = A - B;
+            System.out.printf("%nОтвет: "+ X );            
+        }  
     }
 }

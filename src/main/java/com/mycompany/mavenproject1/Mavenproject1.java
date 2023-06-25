@@ -273,7 +273,7 @@ public class Mavenproject1 {
         }
 
         /*задание 11*/ 
-        Scanner str = new Scanner(System.in);
+        Scanner str = new Scanner(System.in, "windows-1251");
         System.out.print("Введите первое число:  ");
         String v1 = str.nextLine();
         System.out.printf("%nВведите второе число:  ");
@@ -391,5 +391,34 @@ public class Mavenproject1 {
             X = A - B;
             System.out.printf("%nОтвет: "+ X );            
         }  
+
+        /* итоговая задача №3*/
+        System.out.printf("%nВведите количество строк: ");
+        //определяем количество строк и создаем строчный массив
+        int numberstring = in.nextInt();
+        String[] strochki = new String[numberstring];
+        int[] box = new int[numberstring];
+        //наполняем строчный массив + переводим к нижнему регистру для дальнейшего подсчета уникальных символов
+        for (int i = 0; i < strochki.length; i++){
+            System.out.print("Введите строку: ");
+            strochki[i]= str.nextLine();
+            strochki[i] = strochki[i].toLowerCase();
+        }
+        //считаем уникальные символы в каждой введенной строке
+        for (int i =0; i < numberstring; i ++){
+            box[i] = (int) strochki[i].chars().distinct().count();
+        }
+        //находим строку с самым большим количеством уникальных символов
+        int maxstr = box[0];
+        int strCounter = 0;
+        for (int i=0; i< numberstring; i++){
+            if ( box[i] > maxstr)
+            {
+              maxstr = box[i];
+              strCounter = i;
+            } 
+        }      
+        //выводим строку с самым большим количеством уникальных символов
+        System.out.printf("%nОтвет: " + strochki[strCounter]);
     }
 }

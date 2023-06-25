@@ -420,5 +420,59 @@ public class Mavenproject1 {
         }      
         //выводим строку с самым большим количеством уникальных символов
         System.out.printf("%nОтвет: " + strochki[strCounter]);
-    }
+        
+        /* итоговая задача №4*/
+        String question = "Сидит дед, во сто шуб одет, кто его раздевает, тот слезы проливает";
+        String answer = "Заархивированный вирус";
+        String hint = "я - подсказка. теперь ты должен угадать! но это не точно..";
+        String userAnswer;
+        int attempt = 0;
+        for (int i = 0; i <= 3; i++)
+        {
+            System.out.printf("%nЗагадка: " + question );
+            System.out.printf("%nВаш ответ: ");
+            userAnswer = str.nextLine();
+            attempt = attempt + 1;    
+            if (userAnswer.equals(answer))
+            {
+                System.out.printf("%nПравильно!");
+                break;
+            }
+            else
+            {
+                if ((attempt <= 2 )&& (userAnswer.equals("Подсказка")==false))
+                        {
+                            System.out.printf("%nПодумай еще! ");                           
+                        }
+                if ((attempt == 3) && (userAnswer.equals("Подсказка")==false))
+                        {
+                            System.out.printf("%nОбидно, приходи в другой раз! "); 
+                            break;
+                        }
+            }
+            if ((userAnswer.equals("Подсказка"))&&(attempt == 1))
+                {   System.out.println(hint);
+                    System.out.printf("%nВаш ответ: ");
+                    userAnswer = str.nextLine();
+                    if (userAnswer.equals(answer))
+                        {
+                          System.out.printf("%nПравильно!");
+                          break;
+                         } 
+                    else
+                    {
+                        System.out.printf("%nОбидно, приходи в другой раз! ");
+                        break;
+                    }
+                        
+                }
+            if ((attempt == 2 || attempt == 3)&& (userAnswer.equals("Подсказка")))
+                {
+                    System.out.printf("%nПодсказка уже недоступна"); 
+                    attempt = attempt - 1;
+                }
+            }                     
+        }
+                  
+    
 }
